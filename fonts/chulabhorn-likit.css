@@ -1,0 +1,56 @@
+/******************************************************
+ * Chulabhorn Likit Font by Chulabhorn Royal Academy  *
+ * License: SIL Open Font License, 1.1.               *
+ * You can download from source and donate to CRA at: *
+ * https://www.cra.ac.th/th/download_fonts            *
+ *****************************************************/
+
+@font-face {
+  font-family: 'Chulabhorn Likit Text';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('/assets/fonts/chulabhornlikittext-regular.eot'),
+    url('/assets/fonts/chulabhornlikittext-regular.woff2') format('woff2'),
+    url('/assets/fonts/chulabhornlikittext-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Chulabhorn Likit Text';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('/assets/fonts/chulabhornlikittext-medium.eot'),
+    url('/assets/fonts/chulabhornlikittext-medium.woff2') format('woff2'),
+    url('/assets/fonts/chulabhornlikittext-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Chulabhorn Likit Text';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('/assets/fonts/chulabhornlikittext-bold.eot'),
+    url('/assets/fonts/chulabhornlikittext-bold.woff2') format('woff2'),
+    url('/assets/fonts/chulabhornlikittext-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Chulabhorn Likit Text';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('/assets/fonts/chulabhornlikittext-light.eot'),
+    url('/assets/fonts/chulabhornlikittext-light.woff2') format('woff2'),
+    url('/assets/fonts/chulabhornlikittext-light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Chulabhorn Likit Display';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('/assets/fonts/chulabhornlikitdisplay-medium.eot'),
+    url('/assets/fonts/chulabhornlikitdisplay-medium.woff2') format('woff2'),
+    url('/assets/fonts/chulabhornlikitdisplay-medium.woff') format('woff');
+}

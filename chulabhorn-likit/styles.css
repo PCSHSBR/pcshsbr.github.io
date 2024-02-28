@@ -1,0 +1,306 @@
+:root {
+  color-scheme: light dark;
+  font-size: 16px;
+  --blue: hsl(219, 100%, 26%);
+  --lighter-blue: hsl(219, 100%, 85%);
+  --orange: hsl(13, 89%, 54%);
+  --preview-font-size: 30pt;
+  --p-max-width: 100%;
+  --background: #f0f0f0;
+}
+
+* {
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: var(--background);
+  color: #333;
+}
+
+header {
+  background-color: var(--blue);
+  color: var(--lighter-blue);
+  padding: 1rem;
+  text-align: center;
+  height: 100lvh;
+  overflow-y: hidden;
+}
+
+header div {
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  overflow-y: hidden;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 4rem;
+  font-family: 'Chulabhorn Likit Display', sans-serif;
+  height: calc(50%);
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+header span {
+  font-size: 1.5em;
+  font-family: 'Chulabhorn Likit Text', sans-serif;
+}
+
+header p {
+  font-size: 1.2em;
+  font-family: 'Chulabhorn Likit Text', sans-serif;
+  line-height: 1.2;
+  text-align: justify;
+  width: 100%;
+}
+
+header p i {
+  font-style: italic;
+}
+
+hr {
+  margin: 2rem 0;
+  border: 2px solid var(--orange);
+}
+
+main {
+  padding: 2rem;
+  font-family: 'Chulabhorn Likit Text', sans-serif;
+  speak-as: normal;
+}
+
+main section p {
+  margin: .5rem 0 1rem 0;
+  line-height: 1.5;
+  font-size: 1.7rem;
+}
+
+main section.font-option label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0 .5rem 0;
+  display: block;
+}
+
+.font-input {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+main section .font-input input[type="range"] {
+  width: 100%;
+  margin: .5rem 0;
+}
+
+.font-input input[type="range"] {
+  /* -webkit-appearance: none;
+  appearance: none; */
+  width: 100%;
+  height: 1em;
+  background: var(--orange);
+  border-radius: 1rem;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+
+}
+
+main section .preview {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+main section .preview [contenteditable] {
+  outline: none;
+  font-size: var(--preview-font-size);
+  margin: .4rem 0;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+main section .preview [contenteditable]:empty::before {
+  content: attr(placeholder);
+  color: #999;
+}
+
+main section .preview .text {
+  font-family: 'Chulabhorn Likit Text', sans-serif;
+}
+
+main section .preview .display {
+  font-family: 'Chulabhorn Likit Display', serif;
+}
+
+main section .preview .bold {
+  font-weight: bold;
+}
+
+main section .preview .light {
+  font-weight: 300;
+}
+
+main section .preview .regular {
+  font-weight: normal;
+}
+
+main section .preview .medium {
+  font-weight: 500;
+}
+
+main section [name="kind-selector"] {
+  display: none;
+}
+
+main section .all-char-preview label {
+  cursor: pointer;
+  margin: .2rem;
+  display: inline-block;
+  padding: .25rem .75rem;
+  border-radius: 2rem;
+  font-size: .75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: nowrap;
+}
+
+main section .all-char-preview label:hover {
+  background-color: hsl(from var(--orange) h s l / 20%);
+}
+
+main section .all-char-preview label:has(input:checked) {
+  background-color: var(--orange);
+  color: white;
+}
+
+.all-char-preview .col-md-4 {
+  width: 100%;
+  display: inline-block;
+}
+
+.all-char-preview .col-md-8 {
+  width: 100%;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .all-char-preview .col-md-4 {
+    width: calc(33.3333% - 1rem);
+  }
+
+  .all-char-preview .col-md-8 {
+    width: calc(66.6667% - 1rem);
+  }
+}
+
+.all-char-preview .col-md-4 .block-12-Title {
+  font-size: 1.5rem;
+  font-family: 'Chulabhorn Likit Display', sans-serif;
+}
+
+.all-char-preview p {
+  font-size: 1.5rem;
+}
+
+#block-12-Title {
+  font-size: 1rem;
+  font-family: 'Chulabhorn Likit Display', sans-serif;
+  margin: 1rem 0;
+}
+
+.all-char-preview hr {
+  margin: .5rem 0;
+  border: 1px solid var(--orange);
+}
+
+#block-12-Text1 {
+  font-size: 12pt;
+}
+
+#block-12-Text2 {
+  font-size: 18pt;
+}
+
+#block-12-Text3 {
+  font-size: 2rem;
+}
+
+main section .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+main section .switcher {
+  display: flex;
+  justify-content: start;
+  gap: .1rem;
+  margin: 1rem -1rem;
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  /* glassmorph effect */
+  background-color: hsl(from var(--background) h s l / 10%);
+  backdrop-filter: blur(10px);
+}
+
+main section .all-char-preview:has(input[value='display']:checked) p {
+  font-family: 'Chulabhorn Likit Display', serif;
+}
+
+main section .all-char-preview:has(input[value='text-light']:checked) p {
+  font-family: 'Chulabhorn Likit Text', serif;
+  font-weight: 300;
+}
+
+main section .all-char-preview:has(input[value='text-regular']:checked) p {
+  font-family: 'Chulabhorn Likit Text', serif;
+  font-weight: normal;
+}
+
+main section .all-char-preview:has(input[value='text-medium']:checked) p {
+  font-family: 'Chulabhorn Likit Text', serif;
+  font-weight: 500;
+}
+
+main section .all-char-preview:has(input[value='text-bold']:checked) p {
+  font-family: 'Chulabhorn Likit Text', serif;
+  font-weight: bold;
+}
+
+main section.install h2 {
+  font-size: 2rem;
+  font-family: 'Chulabhorn Likit Display', sans-serif;
+  margin: 1rem 0;
+}
+
+main section.install p {
+  font-size: 1rem;
+  font-family: 'Chulabhorn Likit Text', sans-serif;
+  line-height: 1.5;
+}
+
+main section.install pre {
+  font-size: 1rem;
+  font-family: Courier, monospace;
+  line-height: 1.5;
+  background-color: #d3d3d3;
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow-x: auto;
+}
